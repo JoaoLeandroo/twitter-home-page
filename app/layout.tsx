@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
+import Container from "@/components/Container";
+import AsiderRight from "@/components/Asider-right";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -10,13 +13,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Página Inícial / X",
   description: "Twitter o seu portal de notícias",
-  keywords: [
-    "twitter",
-    "X",
-    "notícias",
-    "novidades",
-    "tendencias"
-  ]
+  keywords: ["twitter", "X", "notícias", "novidades", "tendencias"],
 };
 
 export default function RootLayout({
@@ -26,7 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <Container>
+          <div className="flex">
+            <AsiderRight />
+            <main>{children}</main>
+          </div>
+        </Container>
+      </body>
     </html>
   );
 }
