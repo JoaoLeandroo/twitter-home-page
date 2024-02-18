@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={poppins.className}>
         <Container>
-          <div className="flex min-h-screen bg-red-300 relative">
+          <div className="flex min-h-screen relative">
             <AsiderRight />
             <main>{children}</main>
           </div>
