@@ -10,7 +10,7 @@ import { CgMoreO } from "react-icons/cg";
 
 const AsiderRight = () => {
   return (
-    <aside className="w-[80px] md:w-[300px] border-r border-zinc-500 text-zinc-700 static top-0 min-h-screen">
+    <aside className="w-[80px] md:w-[300px] border-r border-zinc-500 text-zinc-700 fixed top-0 min-h-screen">
       <nav className="w-[80%] md:block flex flex-col">
         <div className="w-[80%] mt-1 mb-2">
           <Link
